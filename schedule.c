@@ -321,7 +321,7 @@ static int schedule_process(struct schedproc * rmp, unsigned flags)
 	int pro;
 	if(rmp->priority >= USER_Q -1){
 		pro= _ENDPOINT_P(rmp->endpoint);
-		printf("PID %u swapped in",pro);
+		printf("PID %u swapped in\n",pro);
 	}
 
 	if ((err = sys_schedule(rmp->endpoint, new_prio,
